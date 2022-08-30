@@ -12,7 +12,12 @@ var tag = document.createElement('script');
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
       //  array with each video's info //
-      var playerInfoList = [{id:'player1',height:'390',width:'640',videoId:'M7lc1UVf-VE'}, {id:'player2',height:'390',width:'640',videoId:'M7lc1UVf-VE'}, {id:'player3',height:'390',width:'640',videoId:'M7lc1UVf-VE'}]
+      var playerInfoList = [
+        {id:'player1',height:'390',width:'640',videoId:'An6LvWQuj_8'}, 
+        {id:'player2',height:'390',width:'640',videoId:'KUEIayDKzOk'}, 
+        {id:'player3',height:'390',width:'640',videoId:'PVv20GDSIeY'}, 
+        {id:'player4',height:'390',width:'640',videoId:'q1da9oHD_6Q'},
+      ]
 
       function onYouTubeIframeAPIReady() {
         if(typeof playerInfoList === 'undefined')
