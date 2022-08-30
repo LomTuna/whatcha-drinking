@@ -1,10 +1,9 @@
-const finBtn = document.querySelector('.finishQuiz')
-finBtn.addEventListener('click', Video)
-
-function Video() {
-
+//var finBtn = document.querySelector('.finishQuiz')
+//finBtn.addEventListener('click', Video)
+//function Video() {
+    
 var tag = document.createElement('script');
-tag.id = 'iframe-demo';
+
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -16,12 +15,8 @@ tag.id = 'iframe-demo';
           width: '640',
           videoId: 'M7lc1UVf-VE',
           playerVars: {
-            'playsinline': 1
+            'rel': 0
           },
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
         });
       }
 
@@ -29,14 +24,19 @@ tag.id = 'iframe-demo';
         event.target.playVideo();
       }
 
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
+      function pauseVideo() {
+        player.pauseVideo();
       }
+
+      function playVideo() {
+        player.playVideo();
+      }
+
       function stopVideo() {
         player.stopVideo();
+
+      function getPlayerState() {
+        return player.getPlayerState();
       }
-    };
+    }
+//    };
