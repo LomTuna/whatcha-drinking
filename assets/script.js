@@ -1,6 +1,6 @@
-//var finBtn = document.querySelector('.finishQuiz')
-//finBtn.addEventListener('click', Video)
-//function Video() {
+var prefBtn = document.querySelector('.coldCoffee')
+refBtn.addEventListener('click', Video)
+function Video() {
     
 var tag = document.createElement('script');
 
@@ -10,7 +10,7 @@ var tag = document.createElement('script');
 
       var player;
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
+        player = new YT.Player('player1', {
           height: '390',
           width: '640',
           videoId: 'M7lc1UVf-VE',
@@ -39,4 +39,4 @@ var tag = document.createElement('script');
         return player.getPlayerState();
       }
     }
-//    };
+    };
