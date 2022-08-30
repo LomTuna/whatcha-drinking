@@ -1,1 +1,26 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+#player1 {
+    display: none;
+}
+
+#player2 {
+    display: none;
+}
+
+#player3 {
+    display: none;
+}
+  
+#player4 {
+    display: none;
+}
+  
+#player5 {
+    display: none;
+}
+  
+#player6 {
+    display: none;
+}
+  
