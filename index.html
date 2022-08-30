@@ -6,21 +6,57 @@
     <title>Whatcha Drinking?</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
-  <body>
+  <body class="has-background-primary-light">
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Whatcha Drinking? Select some buttons (Max 3)
+      <h1 class="title has-text-centered is-family-code">
+        Whatcha Drinking? Select a button! (Max 1)
       </h1>
-      <p class="subtitle">
+      <p class="subtitle has-text-centered mt-6">
         What kind of drink are you feeling? <strong>Let's find out!</strong>!
       </p>
     </div>
+    <div>
+      <marquee behavior="" direction=""></marquee>
+    </div>
 
-    <div class="container buttons">
-      <button class="button is-success is-outlined">Save changes</button>
-      <button class="button is-success is-outlined">Save and continue</button>
-      <button class="button is-success is-outlined">Cancel</button>
-    </div>  </section>
+    <div class="container buttons mt-6 mb-3 is-justify-content-center">
+      <button class="button is-warning is-outlined has-text-warning-dark ">Cold Coffee Drink</button>
+      <button class="button is-warning is-outlined has-text-warning-dark">Hot Coffee Drink</button>
+      <button class="button is-warning is-outlined has-text-warning-dark">Non-Coffee Drink</button>
+      <button class="button is-warning is-outlined has-text-warning-dark">Cold Non-Coffee Drink</button>
+      <button class="button is-warning is-outlined has-text-warning-dark">Hot Non-Coffee Drink</button>
+
+      <div class="three-tiles">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">Hot Coffee</p>
+              <p class="subtitle"></p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">Foo</p>
+              <p class="subtitle">Bar</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">Third column</p>
+              <p class="subtitle">With some content</p>
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </div>  
+      <div id="player">
+
+      </div>
+    </section>
   </body>
 </html>
