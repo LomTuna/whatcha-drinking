@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-background-primary-light">
 
 <head>
   <meta charset="utf-8">
@@ -9,89 +9,116 @@
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
-<body class="has-background-primary-light">
-  <section class="section">
-    <div class="container">
-      <h1 class="is-size-1 title has-text-centered is-family-code">
+<body>
+  <header>
+      <h1 class="is-size-1 py-5 mx-2 my-2 title has-text-centered is-family-code has-text-warning">
         Whatcha Drinking?
       </h1>
-      <p class="subtitle has-text-centered is-size-2 mt-6">
-        What kind of drink are you feeling? <strong class="is-size-3">Let's find out!</strong>!
+  </header>
+
+  <section class="section pt-0">
+    <div class="container">
+      <p class="subtitle has-text-centered is-size-3 mt-6">
+        What kind of drink are you feeling? <strong class="is-size-3">Let's find out!!</strong>
       </p>
     </div>
-    <div>
-      <marquee behavior="" direction=""></marquee>
-    </div>
+
     <!--these are buttons for the coffee divs, they reveal your divs and also scroll to them smoothly-->
     <div class="container buttons mt-6 mb-3 is-justify-content-center">
-      <button onclick="coldCoffee(), location.href='#coldCoffee' " class="is-large button is-warning is-rounded is-outlined has-text-warning-dark coldCoffee">Cold Coffee Drink</button>
-      <button onclick="hotCoffee(), location.href='#hotCoffee'" class="is-large button is-warning is-rounded is-outlined has-text-warning-dark hotCoffee">Hot Coffee Drink</button>
-      <button onclick="coldNonCoffee(), location.href='#ColdNonCoffee' " class="is-large button is-warning is-rounded is-outlined has-text-warning-dark coldNonCoffee">Cold Non-Coffee Drink</button>
-      <button onclick="hotNonCoffee(), location.href='#HotNonCoffee'" class="is-large button is-warning is-rounded is-outlined has-text-warning-dark hotNonCoffee">Hot Non-Coffee Drink</button>
+      <div class="btnGroup">
+        <button class="is-large button is-warning is-rounded is-outlined has-text-warning-dark coldCoffee">Cold Coffee Drink</button>
+
+        <button class="is-large button is-warning is-rounded is-outlined has-text-warning-dark hotCoffee">Hot Coffee Drink</button>
+
+        <button class="is-large button is-warning is-rounded is-outlined has-text-warning-dark coldNonCoffee">Cold Non-Coffee Drink</button>
+
+        <button class="is-large button is-warning is-rounded is-outlined has-text-warning-dark hotNonCoffee">Hot Non-Coffee Drink</button>
+      </div>
 
       <!--this is a nav button that brings you to the top of the page-->
       <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
-      </div>
+    </div>
       
-      <div class="empty-space">
-      </div>
+    <div class="empty-space"></div>
 
-          <div id="coldCoffee" class="Cold-Coffee tile is-parent">
-            <article class="tile is-child box">
-              <img class="is-justify-content-center" src="./assets/images/cold brew.png">
-              <p class="title">Iced Coffee</p>
-              <p class="subtitle">A nice Iced Coffee would do the trick. Or even ask for a Cold Brew!</p>
-              <div id="player1"></div>
-            </article>
-          </div>
-          <div id="hotCoffee" class="Hot-Coffee tile is-parent">
-            <article class="tile is-child box">
-              <img class="is-justify-content-center" src="./assets/images/drip.png">
-              <p class="title">Hot Coffee</p>
-              <p class="subtitle">Pour Over / Drip Coffee. A delicious hot brew with a mild flavor, very low in sweetness! Exactly what you think when someone orders one black coffee.</p>
-              <div id="player2"></div>
-            </article>
-          </div>
-          <div id="ColdNonCoffee" class="Cold-Non-Coffee tile is-parent">
-            <article class="tile is-child box">
-              <img class="is-justify-content-center" src="./assets/images/ice tea.png">
-              <p class="title">Iced Tea</p>
-              <p class="subtitle">A wonderful choice for someone who doesn't want coffee! You can get your Tea in multiple forms; black, green, oolong and more! You can even adjust its sweetness!</p>
-              <div id="player3"></div>
-            </article>
-          </div>
-          <div id="HotNonCoffee" class="Hot-Non-Coffee tile is-parent">
-            <article class="tile is-child box">
-              <img class="is-justify-content-center" src="./assets/images/hot tea.png">
-              <p class="title">Hot Tea</p>
-              <p class="subtitle">Like its cool sibling, the Hot Tea is super viable during colder temperatures! It can warm you up, calm you down, and make you feel right at home.</p>
-              <div id="player4"></div>
-            </article>
-          </div>
+    <div id="coffeeColumns" class="columns">
+      <div id="cardColumn" class="column is-four-fifths">
+        <div id="coldCoffee" class="Cold-Coffee tile is-parent">
+          <article class="tile is-child box">
+            <img src="./assets/images/cold brew.png">
+
+            <div id="player1"></div>
+
+            <p class="title">Iced Coffee</p>
+
+            <p class="subtitle">A nice Iced Coffee would do the trick. Or even ask for a Cold Brew!</p>
+          </article>
+        </div>
+
+        <div id="hotCoffee" class="Hot-Coffee tile is-parent">
+          <article class="tile is-child box">
+            <img class="is-justify-content-center" src="./assets/images/drip.png">
+
+            <div id="player2"></div>
+
+            <p class="title">Hot Coffee</p>
+
+            <p class="subtitle">Pour Over / Drip Coffee. A delicious hot brew with a mild flavor, very low in sweetness! <br>Exactly what you think when someone orders one black coffee.</p>
+          </article>
+        </div>
+
+        <div id="ColdNonCoffee" class="Cold-Non-Coffee tile is-parent">
+          <article class="tile is-child box">
+            <img class="is-justify-content-center" src="./assets/images/ice tea.png">
+
+            <div id="player3"></div>
+
+            <p class="title">Iced Tea</p>
+
+            <p class="subtitle">A wonderful choice for someone who doesn't want coffee! You can get your Tea in <br>multiple forms; black, green, oolong and more! You can even adjust its sweetness!</p>
+          </article>
+        </div>
+
+        <div id="HotNonCoffee" class="Hot-Non-Coffee tile is-parent">
+          <article class="tile is-child box">
+            <img class="is-justify-content-center" src="./assets/images/hot tea.png">
+
+            <div id="player4"></div>
+
+            <p class="title">Hot Tea</p>
+
+            <p class="subtitle">Like its cool sibling, the Hot Tea is super viable during colder temperatures! It can warm <br>you up, calm you down, and make you feel right at home.</p>
+          </article>
         </div>
       </div>
-      <div class="">
-      <div class="is-align-content-start">
-        <figure class="image is-128x128">
-          <img class="is-rounded" src="./assets/images/drip.png">
-        </figure>
-      </div>
-        <figure class="image is-128x128">
-          <img class="is-rounded" src="./assets/images/hot tea.png">
-        </figure>
-        <figure class="image is-128x128">
-          <img class="is-rounded" src="./assets/images/cold brew.png">
-        </figure>
-        <figure class="ice-tea image is-128x128">
-          <img class="is-rounded" src="./assets/images/ice tea.png">
-        </figure>
-      </div>
 
+      <div id="circleImg" class="column is-one-fifth is-justify-content-center">
+        <figure class="image is-64x64px mb-4" id="coldCoffCircle">
+          <img class="is-rounded" src="./assets/images/cold brew.png" title="iced coffee">
+        </figure>
+        
+        <figure class="image is-64x64px mb-4" id="hotCoffCircle">
+          <img class="is-rounded" src="./assets/images/drip.png" title="hot coffee">
+        </figure>
+
+        <figure class="image is-64x64px mb-4" id="coldNonCoffCircle">
+          <img class="is-rounded" src="./assets/images/ice tea.png" title="iced tea">
+        </figure>
+
+        <figure class="image is-64x64px mb-4" id="hotNonCoffCircle">
+          <img class="is-rounded" src="./assets/images/hot tea.png" title="hot tea">
+        </figure>
+      </div>
+      
+      <!--API key: -->
+      <iframe src="https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=AIzaSyDvKj7AMduq_DIFU9FKiG9kxf02cWdOtG8" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
     </div>
   </section>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvKj7AMduq_DIFU9FKiG9kxf02cWdOtG8&libraries=places"></script>
   <script src="./assets/script.js"></script>
   <script src="./assets/js/buttons.js"></script>
-
 </body>
 
 </html>
