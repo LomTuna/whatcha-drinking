@@ -52,6 +52,11 @@ function Card1() {
   C4.style.display = "none";
   var Img = document.getElementById('coldCoffCircle');
   Img.style.display = "block";
+  var showMapBtn = document.getElementById('showMapBtn');
+  showMapBtn.style.display = "block";
+  showMapBtn.classList.add("coldCoffMap")
+  var hideMapSection = document.getElementById('googleMapSection')
+  hideMapSection.style.display = "none"
 }
 
 hotCoff.addEventListener('click', Card2)
@@ -66,7 +71,10 @@ function Card2() {
   C4.style.display = "none"; 
   var Img = document.getElementById('hotCoffCircle');
   Img.style.display = "block"
-
+  var showMapBtn = document.getElementById('showMapBtn');
+  showMapBtn.style.display = "block";
+  var hideMapSection = document.getElementById('googleMapSection')
+  hideMapSection.style.display = "none"
 }
 
 coldNon.addEventListener('click', Card3)
@@ -81,6 +89,10 @@ function Card3() {
   C4.style.display = "none";
   var Img = document.getElementById('coldNonCoffCircle');
   Img.style.display = "block";
+  var showMapBtn = document.getElementById('showMapBtn');
+  showMapBtn.style.display = "block";
+  var hideMapSection = document.getElementById('googleMapSection')
+  hideMapSection.style.display = "none"
 }
 
 hotNon.addEventListener('click', Card4)
@@ -95,6 +107,10 @@ function Card4() {
   C4.style.display = "inline-block";
   var Img = document.getElementById('hotNonCoffCircle');
   Img.style.display = "block";
+  var showMapBtn = document.getElementById('showMapBtn');
+  showMapBtn.style.display = "block";
+  var hideMapSection = document.getElementById('googleMapSection')
+  hideMapSection.style.display = "none"
 }
 // Declare nav button as variable
 var mybutton = document.getElementById("myBtn");
@@ -114,4 +130,147 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+var showMapBtn = document.getElementById("showMapBtn");
+showMapBtn.addEventListener('click', showMap)
+
+function showMap() {
+  var mapAndInput = document.getElementById("googleMapSection");
+  mapAndInput.style.display = "block";
+  showMapBtn.style.display = "none";
+}
+
+var form = document.getElementById("myForm");
+function handleForm(event) {
+  event.preventDefault();
+}
+form.addEventListener('submit', handleForm);
+
+//form.addEventListener('submit', renderMap)
+function renderMap() {
+  var address = " ' " + document.getElementById("locInput").value + " ' "
+  alert(address)
+
+  if (document.getElementById('coldCoffee').style.display = 'inline-block',
+  document.getElementById('hotCoffee').style.display = 'none',
+  document.getElementById('ColdNonCoffee').style.display = 'none',
+  document.getElementById('HotNonCoffee').style.display = 'none') {
+    function destinations() {
+      var directionsService = new google.maps.DirectionsService();
+      var directionsDisplay = new google.maps.DirectionsRenderer();
+ 
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementById('panel'));
+  
+      var request = {
+        origin: address,
+        destination: '26116 Overlook Pkwy',
+        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+      };
+    
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(response);
+        }
+      });
+    };
+  }
+
+  else if (document.getElementById('hotCoffee').style.display = 'inline-block',
+  document.getElementById('coldCoffee').style.display = 'none',
+  document.getElementById('ColdNonCoffee').style.display = 'none',
+  document.getElementById('HotNonCoffee').style.display = 'none') {
+    function destinations() {
+      var directionsService = new google.maps.DirectionsService();
+      var directionsDisplay = new google.maps.DirectionsRenderer();
+ 
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementById('panel'));
+  
+      var request = {
+        origin: address,
+        destination: '26210 Canyon Golf Rd',
+        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+      };
+    
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(response);
+        }
+      });
+    };
+  }
+
+  else if (document.getElementById('ColdNonCoffee').style.display = 'inline-block', 
+  document.getElementById('coldCoffee').style.display = 'none',
+  document.getElementById('hotCoffee').style.display = 'none',
+  document.getElementById('HotNonCoffee').style.display = 'none') {
+    function destinations() {
+      var directionsService = new google.maps.DirectionsService();
+      var directionsDisplay = new google.maps.DirectionsRenderer();
+ 
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementById('panel'));
+  
+      var request = {
+        origin: address,
+        destination: '22832 U.S. Hwy 281 N',
+        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+      };
+    
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(response);
+        }
+      });
+    };
+  }
+
+  else if (document.getElementById('HotNonCoffee').style.display = 'none', 
+  document.getElementById('coldCoffee').style.display = 'none',
+  document.getElementById('hotCoffee').style.display = 'none',
+  document.getElementById('ColdNonCoffee').style.display = 'none') {
+    function destinations() {
+      var directionsService = new google.maps.DirectionsService();
+      var directionsDisplay = new google.maps.DirectionsRenderer();
+ 
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementById('panel'));
+  
+      var request = {
+        origin: address,
+        destination: '26210 Canyon Golf Rd',
+        travelMode: google.maps.DirectionsTravelMode.DRIVING,
+      };
+    
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(response);
+        }
+      });
+    };
+  }
+
+  return destinations();
 }

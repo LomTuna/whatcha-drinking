@@ -42,7 +42,7 @@
     <div class="empty-space"></div>
 
     <div id="coffeeColumns" class="columns">
-      <div id="cardColumn" class="column is-four-fifths">
+      <div id="cardColumn" class="column is-four-fifth">
         <div id="coldCoffee" class="Cold-Coffee tile is-parent">
           <article class="tile is-child box">
             <img src="./assets/images/cold brew.png">
@@ -90,8 +90,26 @@
             <p class="subtitle">Like its cool sibling, the Hot Tea is super viable during colder temperatures! It can warm <br>you up, calm you down, and make you feel right at home.</p>
           </article>
         </div>
-      </div>
 
+        <button id="showMapBtn" class="is-large button is-warning is-rounded is-outlined has-text-warning-dark mt-6 ml-6">See A Map?</button>
+
+        <!--API key: AIzaSyDvKj7AMduq_DIFU9FKiG9kxf02cWdOtG8-->
+        <div id="googleMapSection">
+          <div id="inputGroup mx-auto">
+            <label class="has-text-warning title mb-3" style="display: block; text-align: center;">Enter Address Below!</label>
+
+            <form id="myForm" action="" method="get">
+              <input type="text" id="locInput" class="input is-medium has-background-warning mx-auto mb-2" style="display: block; width: 415.5px">
+              <input type="submit" id="locSub" class="is-normal button is-warning is-rounded has-text-warning-dark mx-auto mb-4" style="display: block;" onclick="return renderMap()">
+            </form>
+          </div>
+          <div style="text-align: center;">
+            <div id="map" class="mb-2 mx-auto" style="width: 400px; height: 420px; display: inline-block; border-radius: 10px;"></div>
+            <div id="panel" class="mb-2 mx-auto" style="width: 400px; height: 420px; overflow: auto; background-color: white; display: inline-block; border-radius: 10px;"></div>
+          </div>
+        </div>
+      </div>
+ 
       <div id="circleImg" class="column is-one-fifth is-justify-content-center">
         <figure class="image is-64x64px mb-4" id="coldCoffCircle">
           <img class="is-rounded" src="./assets/images/cold brew.png" title="iced coffee">
@@ -109,16 +127,13 @@
           <img class="is-rounded" src="./assets/images/hot tea.png" title="hot tea">
         </figure>
       </div>
-      
-      <!--API key: -->
-      <iframe src="https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=AIzaSyDvKj7AMduq_DIFU9FKiG9kxf02cWdOtG8" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
     </div>
-  </section>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvKj7AMduq_DIFU9FKiG9kxf02cWdOtG8&libraries=places"></script>
+  </section>
+ 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvKj7AMduq_DIFU9FKiG9kxf02cWdOtG8"></script>
   <script src="./assets/script.js"></script>
-  <script src="./assets/js/buttons.js"></script>
 </body>
 
 </html>

@@ -79,3 +79,22 @@ h1{
     display: none;
     background-color: rgb(151, 85, 10);
 }
+
+#showMapBtn {
+    display: none;
+}
+
+#googleMapSection {
+    display: none;
+    background-color: rgb(151, 85, 10);
+    width: 861px;
+}
+
+#inputGroup {
+    width: 75%;
+    height:250px
+}
+
+#map {
+    display: inline-block;
+}
