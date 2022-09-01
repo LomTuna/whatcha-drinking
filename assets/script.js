@@ -147,7 +147,7 @@ function handleForm(event) {
 }
 form.addEventListener('submit', handleForm);
 
-//form.addEventListener('submit', renderMap)
+form.addEventListener('submit', renderMap)
 function renderMap() {
   var address = " ' " + document.getElementById("locInput").value + " ' "
   alert(address)
